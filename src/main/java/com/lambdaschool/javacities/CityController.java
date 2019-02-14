@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 @Slf4j
-
+@RestController
 public class CityController {
 
     private final CityRepository cityrepos;

@@ -40,7 +40,7 @@ public class JavaCitiesApplication {
         return BindingBuilder.bind(appQueueSecret()).to(appExchange()).with(QUEUE_NAME_SECRET);
     }
 
-    public Queue appQueueLow()
+    public Queue appQueueCities1()
     {
         return new Queue(QUEUE_NAME_CITY1);
     }
@@ -48,19 +48,19 @@ public class JavaCitiesApplication {
     @Bean
     public Binding declareBindingLow()
     {
-        return BindingBuilder.bind(appQueueLow()).to(appExchange()).with(QUEUE_NAME_CITY2);
+        return BindingBuilder.bind(appQueueCities1()).to(appExchange()).with(QUEUE_NAME_CITY1);
     }
 
     @Bean
-    public Queue appQueueHigh()
+    public Queue appQueueCities2()
     {
-        return new Queue(QUEUE_NAME_CITY1);
+        return new Queue(QUEUE_NAME_CITY2);
     }
 
     @Bean
     public Binding declareBindingHigh()
     {
-        return BindingBuilder.bind(appQueueHigh()).to(appExchange()).with(QUEUE_NAME_CITY1);
+        return BindingBuilder.bind(appQueueCities2()).to(appExchange()).with(QUEUE_NAME_CITY2);
     }
 
     @Bean

@@ -25,4 +25,5 @@ public class CityMessageListener {
     {
         log.info("Received City2 Message: {} ", cm.toString());
     }
+
 }
